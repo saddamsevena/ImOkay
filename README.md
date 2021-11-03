@@ -1,9 +1,6 @@
-<p align="center"><a href="https://github.com/saddamsevena/ImOkay" target="_blank"><img src="https://ibb.co/wRJgmWY" width="400"></a></p>
+<p align="center"><a href="https://github.com/saddamsevena/ImOkay" target="_blank"><img src="https://i.ibb.co/SPQyCnJ/logo-imokay.png" width="300"></a></p>
 
-<p align="center">
-    [![Pull Request]](https://github.com/saddamsevena/ImOkay/pulls)
-    [![Issues]](https://github.com/saddamsevena/ImOkay/issues)
-</p>
+<p align="center"> </p>
 
 ## About I'm Okay!
 
