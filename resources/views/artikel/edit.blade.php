@@ -11,12 +11,15 @@
                 
                
                 <div class="card-body">
-                <form action="/artikel/store" method="post">
+                @foreach($artikel as $a)
+                <form action="/artikel/update" method="post">
 		            {{ csrf_field() }}
-                    Judul <input type="text" name="judul" required="required"> <br/>
-                    isi <textarea name="isi" required="required"></textarea><br/>
+                    <input type="hidden" name="id" value="{{ $a->id }}"> <br/>
+                    Judul <input type="text" name="judul" required="required" value="{{ $a->judul }}"> <br/>
+                    isi <textarea name="isi" required="required">{{ $a->isi_artikel }}</textarea><br/>
                     <input type="submit" value="Simpanan">
-                </form>  
+                </form>
+                @endforeach  
                 </div>
             </div>
         </div>

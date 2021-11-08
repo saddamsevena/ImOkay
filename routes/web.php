@@ -23,4 +23,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login');
 Route::get('/view', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm']);
 Route::resource('artikel', ArtikelController::class);
+Route::post('/artikel/store',[App\Http\Controllers\Artikel\ArtikelController::class, 'store']);
 Route::get('/artikel/read/{id}', [App\Http\Controllers\Artikel\ArtikelController::class, 'read'])->name('artikel_read');
+Route::get('/artikel/edit/{id}',[App\Http\Controllers\Artikel\ArtikelController::class, 'edit']);
+Route::post('/artikel/update',[App\Http\Controllers\Artikel\ArtikelController::class, 'update']);
+Route::get('/artikel/delete/{id}',[App\Http\Controllers\Artikel\ArtikelController::class, 'delete']);

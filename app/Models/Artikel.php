@@ -13,6 +13,6 @@ class Artikel extends Model
     protected $primaryKey = 'id';
     
     protected $fillable = [
-        'judul', 'isi_artikel'
+        'judul', 'isi_artikel', 'created_at', 'updated_at'
     ];
 }
