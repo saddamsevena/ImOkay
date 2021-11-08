@@ -69,7 +69,7 @@
         </div>
       </div>
     </nav>
-    @yield('content')
+    <h1>Hello, world!</h1>
 
     <!-- Footer -->
 <footer class="text-center text-lg-start bg-dark">
