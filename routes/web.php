@@ -20,7 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login');
-Route::get('/view', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm']);
 Route::resource('artikel', ArtikelController::class);
 Route::get('/artikel/read/{id}', [App\Http\Controllers\Artikel\ArtikelController::class, 'read'])->name('artikel_read');

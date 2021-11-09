@@ -21,6 +21,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('article/css/nicepage.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ asset('article/css/showarticle.css') }}" media="screen">
+    <link rel="stylesheet" href="{{ asset('article/css/article.css') }}" media="screen">
+    <script class="u-script" type="text/javascript" src="{{ asset('article/js/jquery.js') }}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ asset('article/nicepage.js') }}" defer=""></script>
     <style>
       body {
         background-color: #ededed;

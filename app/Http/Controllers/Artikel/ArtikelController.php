@@ -18,8 +18,9 @@ class ArtikelController extends Controller
 
     public function index()
     {
-        $artikel = DB::table('artikels')->get();
-        return view('artikel.home',['artikel'=>$artikel]);
+        $artikel= Artikel::latest()->paginate(10);
+        $artikelterbaru = Artikel::latest()->paginate(5);
+        return view ('artikel.home',compact('artikel','artikelterbaru'))->with('i', (request()->input('page', 1) -1) * 5);
     }
 
     
