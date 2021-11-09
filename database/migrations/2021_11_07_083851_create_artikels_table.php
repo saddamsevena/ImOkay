@@ -16,7 +16,12 @@ class CreateArtikelsTable extends Migration
         Schema::create('artikels', function (Blueprint $table) {
             $table->id();
             $table->char('judul');
+            $table->string('author')->nullable();
+            $table->date('tanggal')->nullable();
             $table->text('isi_artikel');
+            $table->string('foto')->nullable();
+            $table->string('top_news')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }
