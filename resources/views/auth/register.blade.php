@@ -61,10 +61,16 @@
 
                         <div class="form-group row" style="padding: 10px">
                             <div class="col-md-5">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Retype Password">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Konfirmasi Password">
                             </div>
                         </div>
+                        <div class="form-group row">
 
+                            <div class="col-md-5">
+                                <input id="doctor" type="radio" class="form-control" name="role" required value="Doctor"> Doctor
+                                <input id="user" type="radio" class="form-control" name="role" required value="User"> User
+                            </div>
+                        </div>
                         <div class="form-group row" style="padding: 10px">
                             <div class="col-md-6">
                                 <button type="submit" class="btn btn-secondary col-md-8">
