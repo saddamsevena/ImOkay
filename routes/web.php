@@ -22,3 +22,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('artikel', ArtikelController::class);
 Route::get('/artikel/read/{id}', [App\Http\Controllers\Artikel\ArtikelController::class, 'read'])->name('artikel_read');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index']);
+Route::post('/admin/register', [App\Http\Controllers\AdminController::class, 'create'])->name('register_admin');
