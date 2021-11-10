@@ -180,4 +180,58 @@
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+
+<footer class="footer text-white bg-black">
+        <div class="container">
+            <footer class="row row-cols-5 py-3 my-3 border-top">
+                <div class="col">
+                    <a href="{{ url('/home') }}" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                        <img src="https://i.ibb.co/SPQyCnJ/logo-imokay.png" alt="logo" height="200" srcset="">
+                    </a>
+                </div>
+
+                <div class="col">
+
+                </div>
+
+                <div class="col">
+                
+                </div>
+
+                <div class="col">
+                    <h5>Help & Support</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cara Penggunaan</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 2</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 3</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 4</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 5</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h5>About Us</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tentang Kami</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kontak Kami</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 3</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 4</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 5</a></li>
+                    </ul>
+                </div>
+            </footer>
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-1 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                <span class="text-muted">Hak Cipta © 2021 I'm Okay!</span>
+                </div>
+
+                <ul class="nav col-md-3 justify-content-first list-unstyled d-flex bg-white" style="border-radius: 5px">
+                <li class="ms-3"><span class="text-muted">Follow us On : </span></li>
+                <li class="ms-3"><a class="text-muted" href="#"><img src="https://i.ibb.co/7GqBGkJ/twitter.png" alt="Twitter" width="20"></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><img src="https://i.ibb.co/h7yX5z3/instagram.png" alt="Instagram" width="20"></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                </ul>
+            </footer>
+        </div>
+    </footer>
 </html>
