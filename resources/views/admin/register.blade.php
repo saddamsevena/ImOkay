@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <h5 style="text-align: center; padding: 15px">{{ __('Register') }}</h5>
+                <h5 style="text-align: center; padding: 15px">{{ __('Admin Register') }}</h5>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" class="offset-md-1">
+                    <form method="POST" action="{{ route('register_admin') }}" class="offset-md-1">
                         @csrf
 
                         <div class="form-group row" style="padding: 10px">
@@ -62,13 +62,6 @@
                         <div class="form-group row" style="padding: 10px">
                             <div class="col-md-5">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Konfirmasi Password">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-
-                            <div class="col-md-5">
-                                <input id="doctor" type="radio" class="form-control" name="role" required value="Doctor"> Doctor
-                                <input id="user" type="radio" class="form-control" name="role" required value="User"> User
                             </div>
                         </div>
                         <div class="form-group row" style="padding: 10px">
