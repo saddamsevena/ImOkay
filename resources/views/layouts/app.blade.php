@@ -75,6 +75,9 @@
             <div class="col">
               <a class="nav" href="{{ url('/artikel') }}">Artikel</a>
             </div>
+            <div class="col">
+              <a class="nav" href="#">Konseling</a>
+            </div>
           </div>
         </div>
 
