@@ -35,3 +35,5 @@ Route::get('/admin/artikel', [App\Http\Controllers\Admin\ArtikelsController::cla
 Route::get('/admin/artikel/insert', [App\Http\Controllers\Admin\ArtikelsController::class, 'create'])->name('admin.add.artikel');
 Route::post('/admin/artikel/add', [App\Http\Controllers\Admin\ArtikelsController::class, 'store'])->name('admin.insert.artikel');
 Route::delete('/admin/artikel/delete/{id}', [App\Http\Controllers\Admin\ArtikelsController::class, 'destroy'])->name('admin.artikel.destroy');
+Route::get('/admin/artikel/edit/{id}', [App\Http\Controllers\Admin\ArtikelsController::class, 'edit'])->name('admin.artikel.edit');
+Route::put('/admin/artikel/update', [App\Http\Controllers\Admin\ArtikelsController::class, 'update'])->name('admin.artikel.update');

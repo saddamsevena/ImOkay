@@ -1,16 +1,10 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -33,6 +27,7 @@
         display: flex;
         flex-direction: column;
       }
+
       a {
         text-decoration: none;
         color: inherit;
@@ -41,6 +36,7 @@
         color: inherit;
         transition: inherit;
       }
+
       .nav {
         color: #ededed;
         font-size: 15px;
@@ -49,189 +45,143 @@
       .nav:hover {
         color: #F2E03F;
       }
+
       footer {
         margin-top: auto;
       }
     </style>
-</head>
-<body>
-    <div id="app">
-    <nav class="navbar navbar-dark bg-dark py-2 px-5">
-      <div class="container-fluid">
-        <a href="/">
-          <img src="{{ asset('images/Logo_NoBG.png') }}" alt="Logo I'm Okay!" height=50>
-        </a>
-        <!-- kalo blm login pake ini -->
-        <div>
-        @guest
-        <a class="nav" href="{{ url('/') }}">Beranda</a>
-        <a class="nav" href="#">Self-Healing Program</a>
-        <!--<a class="nav" href="#">Quick Test</a>-->
-        <a class="nav" href="{{ url('/artikel') }}">Artikel</a>
-         @if (Route::has('login'))
-            <a class="nav" href="{{ route('login') }}">{{ __('Login') }}</a>
-          @endif
+  </head>
 
-          @if (Route::has('register'))
-          <a class="nav" href="{{ route('register') }}">{{ __('Register') }}</a>
-          @endif
+<body>
+  <!-- START NAVIGATION BAR -->
+  <nav class="bg-dark py-2">
+    <div class="container">
+      <div class="row d-flex justify-content-between align-items-center">
+        <div class="col-6">
+          <div class="row align-items-center">
+            <!-- Logo -->
+            <div class="col">
+              <a href="/">
+                <img src="{{ asset('images/Logo_NoBG.png') }}" alt="Logo I'm Okay!" height=50>
+              </a>
+            </div>
+            <!-- Links Kiri -->
+            <div class="col">
+              <a class="nav" href="{{ url('/') }}">Beranda</a>
+            </div>
+            <div class="col-4">
+              <a class="nav" href="#">Self-Healing Program</a>
+            </div>
+            <div class="col">
+              <a class="nav" href="{{ url('/artikel') }}">Artikel</a>
+            </div>
+            <div class="col">
+              <a class="nav" href="#">Konseling</a>
+            </div>
+          </div>
         </div>
-        <!-- kalo udah login pake ini -->
+
+        <!-- Links kanan -->
+        <!-- Kalau belum log in -->
+        @guest
+        <div class="col-2">
+          <div class="row">
+            @if (Route::has('login'))
+            <div class="col">
+              <a class="nav" href="{{ route('login') }}">{{ __('Login') }}</a>
+            </div>
+            @endif
+            @if (Route::has('register'))
+            <div class="col">
+              <a class="nav" href="{{ route('register') }}">{{ __('Register') }}</a>
+            </div>
+            @endif
+          </div>
+        </div>
+
+        <!-- Kalau sudah log in -->
         @else
-        <a class="nav" href="{{ url('/home') }}">Beranda</a>
-        <a class="nav" href="#">Self-Healing Program</a>
-        <!--<a class="nav" href="#">Quick Test</a>-->
-        <a class="nav" href="{{ url('/artikel') }}">Artikel</a>
-        <div class="dropdown show">
+        <div class="col-1">
           <a class="nav" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" type="button">
-          {{ Auth::user()->name }}<i class="fa fa-user-circle mx-2" style="font-size: 25px;"></i>
+            {{ Auth::user()->name }}<i class="fa fa-user-circle mx-2" style="font-size: 25px;"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
             <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="{{ route('logout') }}"
+            <li>
+              <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form></li>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+              </form>
+            </li>
           </ul>
         </div>
-      </div>
-      @endguest
-    </nav>
+        @endguest
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAVIGATION BAR -->
+
+  <main class="py-4">
+    @yield('content')
+  </main>
+
+  <!-- START FOOTER -->
+  <footer class="text-center text-lg-start bg-dark">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <!-- Logo -->
+        <div class="col-8 mx-auto mb-4">
+          <img src="{{ asset('images/Logo_NoBG.png') }}" alt="Logo I'm Okay!" width=300>
+        </div>
+        <!-- Kolom kanan 1 -->
+        <div class="col-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            <a href="#!" class="nav">Help & Support</a>
+          </h6>
+          <h6 class="text-uppercase fw-bold mb-4">
+            <a href="#!" class="nav">Cara Penggunaan</a>
+          </h6>
+        </div>
+        <!-- Kolom kanan 2 -->
+        <div class="col-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            <a href="#!" class="nav">About Us</a>
+          </h6>
+          <p>
+            <a href="#!" class="nav">Tentang Kami</a>
+          </p>
+          <p>
+            <a href="#!" class="nav">Kontak Kami</a>
+          </p>
+        </div>
+      </div>
     </div>
 
-      <!-- Footer -->
-<footer class="text-center text-lg-start bg-dark">
-
-<!-- Section: Links  -->
-<section class="">
-  <div class="container text-center text-md-start mt-5">
-    <!-- Grid row -->
-    <div class="row mt-3">
-      <!-- Grid column -->
-      <div class="col-8 mx-auto mb-4">
-        <!-- Content -->
-        <img src="{{ asset('images/Logo_NoBG.png') }}" alt="Logo I'm Okay!" width=300>
+    <!-- Footer bawah -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom text-light">
+      <!-- Copyright -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Hak Cipta © 2021 I'm Okay!</span>
       </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-2 mx-auto mb-4">
-        <!-- Links -->
-        <h6 class="text-uppercase fw-bold mb-4">
-          <a href="#!" class="nav">Help & Support</a>
-        </h6>
-        <h6 class="text-uppercase fw-bold mb-4">
-          <a href="#!" class="nav">Cara Penggunaan</a>
-        </h6>
+      <!-- Social media -->
+      <div>
+        <span class="me-4">Follow us on</span>
+        <a href="" class="me-4">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="" class="me-4">
+          <i class="fa fa-instagram"></i>
+        </a>
       </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-2 mx-auto mb-4">
-        <!-- Links -->
-        <h6 class="text-uppercase fw-bold mb-4">
-          <a href="#!" class="nav">About Us</a>
-        </h6>
-        <p>
-          <a href="#!" class="nav">Tentang Kami</a>
-        </p>
-        <p>
-          <a href="#!" class="nav">Kontak Kami</a>
-        </p>
-      </div>
-      <!-- Grid column -->
-    </div>
-    <!-- Grid row -->
-  </div>
-</section>
-<!-- Section: Links  -->
-
-<!-- Section: Social media -->
-<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom text-light">
-  <!-- Left -->
-  <div class="me-5 d-none d-lg-block">
-    <span>Hak Cipta © 2021 I'm Okay!</span>
-  </div>
-  <!-- Left -->
-
-  <!-- Right -->
-  <div>
-    <span class="me-4">Follow us on</span>
-    <a href="" class="me-4">
-      <i class="fa fa-twitter"></i>
-    </a>
-    <a href="" class="me-4">
-      <i class="fa fa-instagram"></i>
-    </a>
-  </div>
-  <!-- Right -->
-</section>
-<!-- Section: Social media -->
-</footer>
-<!-- Footer -->
+    </section>
+  </footer>
+  <!-- END FOOTER -->
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-
-<footer class="footer text-white bg-black">
-        <div class="container">
-            <footer class="row row-cols-5 py-3 my-3 border-top">
-                <div class="col">
-                    <a href="{{ url('/home') }}" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                        <img src="https://i.ibb.co/SPQyCnJ/logo-imokay.png" alt="logo" height="200" srcset="">
-                    </a>
-                </div>
-
-                <div class="col">
-
-                </div>
-
-                <div class="col">
-                
-                </div>
-
-                <div class="col">
-                    <h5>Help & Support</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cara Penggunaan</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 2</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 3</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 4</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 5</a></li>
-                    </ul>
-                </div>
-
-                <div class="col">
-                    <h5>About Us</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tentang Kami</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kontak Kami</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 3</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 4</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 5</a></li>
-                    </ul>
-                </div>
-            </footer>
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-1 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                <span class="text-muted">Hak Cipta © 2021 I'm Okay!</span>
-                </div>
-
-                <ul class="nav col-md-3 justify-content-first list-unstyled d-flex bg-white" style="border-radius: 5px">
-                <li class="ms-3"><span class="text-muted">Follow us On : </span></li>
-                <li class="ms-3"><a class="text-muted" href="#"><img src="https://i.ibb.co/7GqBGkJ/twitter.png" alt="Twitter" width="20"></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><img src="https://i.ibb.co/h7yX5z3/instagram.png" alt="Instagram" width="20"></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-                </ul>
-            </footer>
-        </div>
-    </footer>
 </html>

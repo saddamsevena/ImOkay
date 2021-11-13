@@ -22,6 +22,8 @@
             <td><img src="/article/img/{{ $artikels->foto }}" width="100px"></td>
             <td>{{ $artikels->top_news }}</td>
             <td>
+            <a class="btn btn-info btn-sm" href="{{ route('admin.artikel.edit',$artikels->id) }}">Update</a>
+            <a class="btn btn-primary btn-sm" href="{{ route('admin.artikel.destroy', $artikels->id)}}">Delete</a>
             </td>
         </tr>
         @endforeach
