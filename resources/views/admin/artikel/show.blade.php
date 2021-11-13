@@ -19,11 +19,15 @@
             <td>{{ $artikels->judul }}</td>
             <td>{{ $artikels->author }}</td>
             <td>{{ $artikels->isi_artikel }}</td>
-            <td><img src="/article/img/{{ $artikels->foto }}" width="100px"></td>
+            <td><img src="/storage/article/img/{{ $artikels->foto }}" width="100px"></td>
             <td>{{ $artikels->top_news }}</td>
             <td>
+            <form action="{{ route('admin.artikel.destroy', $artikels->id)}}" method="POST">
             <a class="btn btn-info btn-sm" href="{{ route('admin.artikel.edit',$artikels->id) }}">Update</a>
-            <a class="btn btn-primary btn-sm" href="{{ route('admin.artikel.destroy', $artikels->id)}}">Delete</a>
+            @csrf
+            @method('DELETE')
+                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Delete</button>
+            </form>
             </td>
         </tr>
         @endforeach

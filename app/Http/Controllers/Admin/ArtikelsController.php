@@ -15,12 +15,20 @@ class ArtikelsController extends Controller
 {
     public function index()
     {
-        $artikel = Artikel::latest()->paginate(5);
-    
-        return view('admin.artikel.show',compact('artikel'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        if(Auth::check()){
+            if(Auth::user()->role == 'Admin'){
+                $artikel = Artikel::latest()->paginate(10);
+                return view('admin.artikel.show',compact('artikel'))
+                ->with('i', (request()->input('page', 1) - 1) * 10);
+            }else{
+                return redirect()->route('home')
+                        ->with('error', 'Anda tidak memiliki akses');
+            }
+        }else{
+            return view('auth.login')
+                        ->with('error', 'Mohon login terlebih dahulu');
+        }
     }
-
     public function create()
     {
         return view('admin.artikel.add');
@@ -37,7 +45,8 @@ class ArtikelsController extends Controller
         ]);
 
         $foto = $request->file('foto');
-        $foto->storeAs('/article/img', $foto->hashName());
+        $foto->storeAs('article/img', $foto->hashName(), 'public');
+        
 
         Artikel::create([
             'judul' => $request->judul,
@@ -52,10 +61,10 @@ class ArtikelsController extends Controller
     
     public function edit($id)
     {
-        return view('admin.artikel.edit');
+        return view('admin.artikel.edit', compact('id'));
     }
 
-    public function update(Request $request, Artikel $artikel)
+    public function update(Request $request)
     {
         $this->validate($request, [
             'judul' => 'required',
@@ -64,7 +73,7 @@ class ArtikelsController extends Controller
             'top_news' => 'required',
         ]);
 
-        $artikel = Artikel::findOrFail($artikel->id);
+        $artikel = Artikel::findOrFail($request->id);
         if($request->file('foto') == ""){
             $artikel->update([
             'judul' => $request->judul,
@@ -75,7 +84,7 @@ class ArtikelsController extends Controller
         }else{
             Storage::disk('local')->delete('article/img/'.$artikel->foto);
             $foto = $request->file('foto');
-            $foto->storeAs('/article/img', $foto->hashName());
+            $foto->storeAs('/article/img', $foto->hashName(), 'public');
 
             $artikel->update([
                 'judul' => $request->judul,

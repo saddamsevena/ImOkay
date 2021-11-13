@@ -23,7 +23,13 @@
 @endif
 <form action="{{ route('admin.artikel.update')}}" method="POST" enctype="multipart/form-data">
 @csrf
+@method('PUT')
      <div class="row">
+     <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <input type="hidden" name="id" class="form-control" value="{{$id}}">
+            </div>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Judul:</strong>
