@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Artikel;
+namespace App\Http\Controllers;
 
 use App\Models\Artikel;
 use App\Http\Controllers\Controller;
@@ -9,13 +9,6 @@ use Illuminate\Support\Facades\DB;
 
 class ArtikelController extends Controller
 {
-    
-    public function create()
-    {
-        return view('artikel.add');
-    }
-
-
     public function index()
     {
         $artikel= Artikel::latest()->paginate(10);

@@ -22,8 +22,9 @@
                 <h4 class="u-align-center u-text u-text-default u-text-2">{{$ar->judul}}</h4>
                 <p class="u-align-center u-text u-text-5">{{$ar->top_news}}</p>
               </div>
-              @endforeach
             </div>
+            @endforeach
+          </div>
           <a class="u-carousel-control u-carousel-control-prev u-grey-60 u-icon-circle u-spacing-9 u-carousel-control-1" href="#carousel-bd35" role="button" data-u-slide="prev">
             <span aria-hidden="true">
               <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
@@ -43,10 +44,10 @@
       @if($artikel->isEmpty())
       <h1>Tidak ada artikel untuk dibaca</h1>
       @else
+      @foreach($artikel as $a)
           <div class="u-repeater u-repeater-1">
-          @foreach($artikel as $a)
             <div class="u-align-center u-black u-blog-post u-container-style u-repeater-item u-repeater-item-1">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-12">
                 <a class="u-post-header-link" href="/artikel/read/{{$a->id}}">
                   <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-3" src="img/3.jpeg" data-image-width="809" data-image-height="1080">
                 </a>
@@ -58,11 +59,11 @@
                 </div>
                 <a href="/artikel/read/{{$a->id}}" class="u-blog-control u-border-2 u-border-palette-1-base u-btn u-btn-rectangle u-button-style u-none u-text-body-alt-color u-btn-1">Read More</a>
               </div>
-              @endforeach
-            @endif
             </div>
           </div>
         </div>
+        @endforeach
+        @endif
       </div>
     </section>
 @endsection
