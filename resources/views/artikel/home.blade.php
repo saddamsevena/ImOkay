@@ -18,13 +18,13 @@
           @foreach($artikelterbaru as $ar)
             <div class="u-active u-carousel-item u-container-style u-slide">
               <div class="u-container-layout u-container-layout-2">
-                <img alt="" class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-image u-image-default u-image-1" data-image-width="1280" data-image-height="716" src="img/1.jpeg">
+                <img alt="" class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-image u-image-default u-image-1" data-image-width="1280" data-image-height="716" src="/storage/article/img/{{ $ar->foto }}">
                 <h4 class="u-align-center u-text u-text-default u-text-2">{{$ar->judul}}</h4>
                 <p class="u-align-center u-text u-text-5">{{$ar->top_news}}</p>
               </div>
             </div>
-            @endforeach
           </div>
+          @endforeach
           <a class="u-carousel-control u-carousel-control-prev u-grey-60 u-icon-circle u-spacing-9 u-carousel-control-1" href="#carousel-bd35" role="button" data-u-slide="prev">
             <span aria-hidden="true">
               <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
@@ -49,7 +49,7 @@
             <div class="u-align-center u-black u-blog-post u-container-style u-repeater-item u-repeater-item-1">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-12">
                 <a class="u-post-header-link" href="/artikel/read/{{$a->id}}">
-                  <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-3" src="img/3.jpeg" data-image-width="809" data-image-height="1080">
+                  <img alt="" class="u-blog-control u-expanded-width u-image u-image-default u-image-3" src="/storage/article/img/{{ $a->foto }}" data-image-width="809" data-image-height="1080">
                 </a>
                 <h4 class="u-blog-control u-text u-text-8">
                   <a class="u-post-header-link" href="/artikel/read/{{$a->id}}">{{ $a->judul }}</a>
@@ -61,9 +61,9 @@
               </div>
             </div>
           </div>
-        </div>
-        @endforeach
+          @endforeach
         @endif
+        </div>
       </div>
     </section>
 @endsection
