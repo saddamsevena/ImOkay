@@ -6,12 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Fontawsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -49,6 +51,7 @@
       footer {
         margin-top: auto;
       }
+      @yield('css')
     </style>
   </head>
 
@@ -125,9 +128,17 @@
   </nav>
   <!-- END NAVIGATION BAR -->
 
-  <main class="py-4">
-    @yield('content')
-  </main>
+  <!-- START MAIN -->
+  <div class="py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+        @yield('content')
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END MAIN -->
 
   <!-- START FOOTER -->
   <footer class="text-center text-lg-start bg-dark">
@@ -149,13 +160,13 @@
         <!-- Kolom kanan 2 -->
         <div class="col-2 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold mb-4">
-            <a href="#!" class="nav">About Us</a>
+            <a href="#" class="nav">About Us</a>
           </h6>
           <p>
-            <a href="#!" class="nav">Tentang Kami</a>
+            <a href="#" class="nav">Tentang Kami</a>
           </p>
           <p>
-            <a href="#!" class="nav">Kontak Kami</a>
+            <a href="#" class="nav">Kontak Kami</a>
           </p>
         </div>
       </div>
@@ -170,11 +181,11 @@
       <!-- Social media -->
       <div>
         <span class="me-4">Follow us on</span>
-        <a href="" class="me-4">
-          <i class="fa fa-twitter"></i>
+        <a href="#" class="me-4">
+          <i class="fab fa-twitter"></i>
         </a>
-        <a href="" class="me-4">
-          <i class="fa fa-instagram"></i>
+        <a href="#" class="me-4">
+          <i class="fab fa-instagram"></i>
         </a>
       </div>
     </section>
