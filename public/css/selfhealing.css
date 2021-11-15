@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  background-color: #ededed;
+}
+
+.container {
+  width: 1200px;
+  height: 578px;
+  opacity: 1;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  overflow: hidden;
+}
+
+h1 {
+  width: 820px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 60px;
+  font-family: Nunito;
+  font-weight: Regular;
+  font-size: 37px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v91_17 {
+  width: 500px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 140px;
+  font-family: Nunito;
+  font-weight: Regular;
+  font-size: 25px;
+  opacity: 1;
+  text-align: justify;
+}
+
+.orgpusing {
+  width: 1300px;
+  height: 500px;
+  background-image: url("./abc1.png");
+  background-repeat: no-repeat;
+  background-position: left 650px top 50%;
+  background-size: 37%;
+}
+
+.bagiantengah {
+  width: 1000px;
+  height: 1700px;
+  opacity: 1;
+  position: absolute;
+  overflow: hidden;
+}
+
+.layanan1 {
+  width: 500px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 600px;
+  left: 485px;
+  font-family: Nunito;
+  font-weight: Regular;
+  font-size: 25px;
+  opacity: 1;
+  text-align: justify;
+}
+
+.kotakbiru1 {
+  width: 200px;
+  height: 200px;
+  background: rgba(49, 100, 244, 1);
+  opacity: 1;
+  position: absolute;
+  top: 600px;
+  left: 235px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  background-image: url("./layanan1.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.layanan2 {
+  width: 500px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 900px;
+  left: 485px;
+  font-family: Nunito;
+  font-weight: Regular;
+  font-size: 25px;
+  opacity: 1;
+  text-align: justify;
+}
+
+.kotakbiru2 {
+  width: 200px;
+  height: 200px;
+  background: rgba(49, 100, 244, 1);
+  opacity: 1;
+  position: absolute;
+  top: 900px;
+  left: 235px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  background-image: url("./play.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.joinnow {
+  width: 300px;
+  height: 55px;
+  color: rgba(255, 255, 255, 1);
+  background-color: #585858;
+  border-radius: 10px;
+  position: absolute;
+  top: 1250px;
+  left: 500px;
+  font-family: Nunito;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: center;
+}
+
+.joinnow:hover {
+  opacity: 0.9;
+}
