@@ -31,9 +31,13 @@ Route::get('/admin', [App\Http\Controllers\Admin\AdminController::class, 'index'
 Route::post('/admin/register', [App\Http\Controllers\Admin\AdminController::class, 'create'])->name('register_admin');
 Route::get('/home/admin', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('adminhome');
 Route::get('/home/doctor', [App\Http\Controllers\HomeController::class, 'index'])->name('doctorhome');
+
 Route::get('/admin/artikel', [App\Http\Controllers\Admin\ArtikelsController::class, 'index'])->name('admin.show.artikel');
 Route::get('/admin/artikel/insert', [App\Http\Controllers\Admin\ArtikelsController::class, 'create'])->name('admin.add.artikel');
 Route::post('/admin/artikel/add', [App\Http\Controllers\Admin\ArtikelsController::class, 'store'])->name('admin.insert.artikel');
 Route::delete('/admin/artikel/delete/{id}', [App\Http\Controllers\Admin\ArtikelsController::class, 'destroy'])->name('admin.artikel.destroy');
 Route::get('/admin/artikel/edit/{id}', [App\Http\Controllers\Admin\ArtikelsController::class, 'edit'])->name('admin.artikel.edit');
 Route::put('/admin/artikel/update', [App\Http\Controllers\Admin\ArtikelsController::class, 'update'])->name('admin.artikel.update');
+
+Route::get('/selfhealing', [App\Http\Controllers\HomeController::class, 'selfhealing'])->name('selfhealing');
+Route::get('/selfhealing/view', [App\Http\Controllers\HomeController::class, 'view_selfhealing'])->name('view.selfhealing');

@@ -45,7 +45,7 @@ class ArtikelsController extends Controller
         ]);
 
         $foto = $request->file('foto');
-        $foto->storeAs('article/img', $foto->hashName(), 'public');
+        $foto->storeAs('/article/img', $foto->hashName(), 'public');
         
 
         Artikel::create([
@@ -82,7 +82,7 @@ class ArtikelsController extends Controller
             'top_news' => $request->top_news,
             ]);
         }else{
-            Storage::disk('local')->delete('article/img/'.$artikel->foto);
+            Storage::disk('local')->delete('/article/img/'.$artikel->foto);
             $foto = $request->file('foto');
             $foto->storeAs('/article/img', $foto->hashName(), 'public');
 
