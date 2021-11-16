@@ -129,10 +129,6 @@
                     <h5>Help & Support</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cara Penggunaan</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 2</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 3</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 4</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 5</a></li>
                     </ul>
                 </div>
 
@@ -141,9 +137,6 @@
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Tentang Kami</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Kontak Kami</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 3</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 4</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Section 5</a></li>
                     </ul>
                 </div>
             </footer>
