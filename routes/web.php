@@ -41,3 +41,5 @@ Route::put('/admin/artikel/update', [App\Http\Controllers\Admin\ArtikelsControll
 
 Route::get('/selfhealing', [App\Http\Controllers\HomeController::class, 'selfhealing'])->name('selfhealing');
 Route::get('/selfhealing/view', [App\Http\Controllers\HomeController::class, 'view_selfhealing'])->name('view.selfhealing');
+
+Route::get('/konseling', [App\Http\Controllers\KonselingController::class, 'index'])->name('home.konseling');

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('article/css/nicepage.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('article/css/showarticle.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('article/css/article.css') }}" media="screen">
-    <!-- <link rel="stylesheet" href="{{ asset('css/viewselfhealing.css') }}" media="screen"> -->
+
     <script class="u-script" type="text/javascript" src="{{ asset('article/js/jquery.js') }}" defer=""></script>
     <script class="u-script" type="text/javascript" src="{{ asset('article/nicepage.js') }}" defer=""></script>
     <style>
@@ -80,7 +80,7 @@
             </div>
             @if(Auth::check())
              <div class="col">
-                <a class="nav" href="#">Konseling</a>
+                <a class="nav" href="{{ url('/konseling') }}">Konseling</a>
               </div>
             @else
                 <div class="col">
