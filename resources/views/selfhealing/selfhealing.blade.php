@@ -3,7 +3,7 @@
 @section('content')
 <body>
     <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/selfhealing.css') }}" />
-    <div class="container">
+    <div class="atas">
       <div class="orgpusing"></div>
       <h1>30 Days Self Healing Program</h1>
       <span class="v91_17"
