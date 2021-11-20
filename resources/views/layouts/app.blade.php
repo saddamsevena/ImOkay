@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('article/css/nicepage.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('article/css/showarticle.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('article/css/article.css') }}" media="screen">
+
     <script class="u-script" type="text/javascript" src="{{ asset('article/js/jquery.js') }}" defer=""></script>
     <script class="u-script" type="text/javascript" src="{{ asset('article/nicepage.js') }}" defer=""></script>
     <style>
@@ -53,14 +54,13 @@
       }
       @yield('css')
     </style>
-  </head>
 
 <body>
   <!-- START NAVIGATION BAR -->
   <nav class="bg-dark py-2">
     <div class="container">
       <div class="row d-flex justify-content-between align-items-center">
-        <div class="col-6">
+        <div class="col-8">
           <div class="row align-items-center">
             <!-- Logo -->
             <div class="col">
@@ -73,14 +73,20 @@
               <a class="nav" href="{{ url('/') }}">Beranda</a>
             </div>
             <div class="col-4">
-              <a class="nav" href="#">Self-Healing Program</a>
+              <a class="nav" href="{{ url('/selfhealing') }}">Self-Healing Program</a>
             </div>
             <div class="col">
               <a class="nav" href="{{ url('/artikel') }}">Artikel</a>
             </div>
-            <div class="col">
-              <a class="nav" href="#">Konseling</a>
-            </div>
+            @if(Auth::check())
+             <div class="col">
+                <a class="nav" href="{{ url('/konseling') }}">Konseling</a>
+              </div>
+            @else
+                <div class="col">
+                <a class="nav" href="{{ url('/login') }}">Konseling</a>
+                </div>
+              @endif
           </div>
         </div>
 

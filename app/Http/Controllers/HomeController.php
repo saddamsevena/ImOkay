@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function selfhealing()
+    {
+        return view('selfhealing.home');
+    }
+
+    public function view_selfhealing()
+    {
+        return view('selfhealing.view');
+    }
 }
