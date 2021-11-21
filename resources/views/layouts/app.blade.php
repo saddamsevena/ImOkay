@@ -36,6 +36,7 @@
         color: inherit;
       }
       a:hover {
+        text-decoration: none;
         color: inherit;
         transition: inherit;
       }
@@ -91,8 +92,8 @@
         </div>
 
         <!-- Links kanan -->
-        <!-- Kalau belum log in -->
         @guest
+        <!-- Kalau belum log in -->
         <div class="col-2">
           <div class="row">
             @if (Route::has('login'))
@@ -108,9 +109,9 @@
           </div>
         </div>
 
-        <!-- Kalau sudah log in -->
         @else
-        <div class="col-1">
+        <!-- Kalau sudah log in -->
+        <div class="col-2">
           <a class="nav" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" type="button">
             {{ Auth::user()->name }}<i class="fa fa-user-circle mx-2" style="font-size: 25px;"></i>
           </a>
@@ -156,18 +157,18 @@
         </div>
         <!-- Kolom kanan 1 -->
         <div class="col-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
+          <p class="h6 text-uppercase fw-bold mb-4">
             <a href="#!" class="nav">Help & Support</a>
-          </h6>
-          <h6 class="text-uppercase fw-bold mb-4">
+          </p>
+          <p class="h6 text-uppercase fw-bold mb-4">
             <a href="#!" class="nav">Cara Penggunaan</a>
-          </h6>
+          </p>
         </div>
         <!-- Kolom kanan 2 -->
         <div class="col-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
+          <p class="h6 text-uppercase fw-bold mb-4">
             <a href="#" class="nav">About Us</a>
-          </h6>
+          </p>
           <p>
             <a href="#" class="nav">Tentang Kami</a>
           </p>

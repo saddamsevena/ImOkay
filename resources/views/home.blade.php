@@ -25,7 +25,7 @@
 <!-- START HEAD -->
 <div class="row">
     <div class="col-6">
-        <h1>Langkah awal mengenali gejala gangguan kesehatan mental.</h1>
+        <p class="h1">Langkah awal mengenali gejala gangguan kesehatan mental.</p>
         <button type="button" class="btn btn-secondary"><a href="">Start Test</a></button>
     </div>
     <div class="col-6 text-end">
@@ -37,7 +37,7 @@
 <!-- START LAYANAN -->
 <div class="row justify-content-center align-items-center my-3">
     <div class="col-12 text-center">
-        <h4><b>LAYANAN <span class="highlight">I'M OKAY</span></b></h4>
+        <p class="h4"><b>LAYANAN <span class="highlight">I'M OKAY</span></b></p>
     </div>
     <div class="col-2 text-center">
         <i class="fas fa-tasks icon"></i>
@@ -70,7 +70,7 @@
 <!-- START TESTIMONIAL -->
 <div class="row justify-content-center align-items-center my-3">
     <div class="col-12 text-center">
-        <h4><b>TESTIMONIAL <span class="highlight">I'M OKAY</span></b></h4>
+        <p class="h4"><b>TESTIMONIAL <span class="highlight">I'M OKAY</span></b></p>
     </div>
     <div class="col-10 text-center">
         <div id="demo" class="carousel slide" data-ride="carousel">
