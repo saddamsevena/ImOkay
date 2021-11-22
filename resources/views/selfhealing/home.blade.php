@@ -1,19 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="atas">
-      <div class="orgpusing"></div>
-      <h1>30 Days Self Healing Program</h1>
-      <span class="v91_17"
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/selfhealing.css') }}" />
+    <div class="container" id="atas">
+      <div class="container" id="orgpusing" style="background-image: url('{{ asset('img/abc1.png')}}');"></div>
+      <h1 id="judul">30 Days Self Healing Program</h1>
+      <span class="col-8" id="tulisan" 
         >Membantu dirimu untuk mengendalikan ketakutan, tingkat kestressan dan
         kepanikan yang terjadi dengan mengikuti daily activity pada program ini.
         Selama 30 hari tersebut akan diberikan kegiatan - kegiatan serta video
         yang dapat dilakukan untuk dapa mengurangi gejala yang anda alami
       </span>
     </div>
-    <div class="bagiantengah">
-      <div class="kotakbiru1"></div>
-      <div class="kotakbiru2"></div>
+    <div class="container" id="bagiantengah">
+      <div class="row" id="kotakbiru1" style="background-image: url('{{ asset('img/layanan1.png')}}');"></div>
+      <div class="row" id="kotakbiru2" style="background-image: url('{{ asset('img/play.png')}}');"></div>
       <div class="layanan">
         <span class="layanan1">
           30 Days Modules - Modul modul yang berisi tentang "bagaimana cara"
