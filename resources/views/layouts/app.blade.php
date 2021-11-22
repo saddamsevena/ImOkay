@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="{{ asset('article/css/showarticle.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('article/css/article.css') }}" media="screen">
 
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/selfhealing.css') }}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/viewselfhealing.css') }}" /> -->
+
     <script class="u-script" type="text/javascript" src="{{ asset('article/js/jquery.js') }}" defer=""></script>
     <script class="u-script" type="text/javascript" src="{{ asset('article/nicepage.js') }}" defer=""></script>
     <style>
@@ -115,7 +118,7 @@
             {{ Auth::user()->name }}<i class="fa fa-user-circle mx-2" style="font-size: 25px;"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="/profile/view/{{ Auth::user()->id}}">Profile</a></li>
             <li>
               <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();

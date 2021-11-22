@@ -81,16 +81,22 @@
             </ul>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <p><b>"Testi 1"</b></p>
-                    <p class="text-muted">- Orang 1</p>
+                    <p><b>"Im Okay sangat membantu saya dalam menangani kesehatan 
+                        mental, Psikolognya juga sangat ramah dan berpengalaman, saya jadi tidak stress
+                        lagi selama kuliah online"</b></p>
+                    <p class="text-muted">- Anastasia Victoria Yuarsa</p>
                 </div>
                 <div class="carousel-item">
-                    <p><b>"Testi 2"</b></p>
-                    <p class="text-muted">- Orang 2</p>
+                    <p><b>"Selama pake fitur 30 Days Self Healing dari Im Okay
+                        saya jadi tau bagaimana cara mengatasi panik attack dan anxiety attack
+                        tanpa harus ke psikolog, sangat membantu"</b></p>
+                    <p class="text-muted">- Muhammad Fadlan Fasya</p>
                 </div>
                 <div class="carousel-item">
-                    <p><b>"Testi 3"</b></p>
-                    <p class="text-muted">- Orang 3</p>
+                    <p><b>"Awalnya ga berani ke psikolog, takut dicap gila tapi
+                        waktu pake Im Okay, kita cuma tinggal konsultasi lewat whatsapp jadi lebih
+                        mudah juga"</b></p>
+                    <p class="text-muted">- Salsabila Karin</p>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#demo" data-slide="prev">

@@ -43,3 +43,7 @@ Route::get('/selfhealing', [App\Http\Controllers\HomeController::class, 'selfhea
 Route::get('/selfhealing/view', [App\Http\Controllers\HomeController::class, 'view_selfhealing'])->name('view.selfhealing');
 
 Route::get('/konseling', [App\Http\Controllers\KonselingController::class, 'index'])->name('home.konseling');
+
+Route::get('/profile/view/{id}', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile.view');
+Route::get('/profile/edit/{id}', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
+Route::put('/profile/update', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');

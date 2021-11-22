@@ -39,7 +39,7 @@ img {
 <!-- END HEAD -->
 @foreach ($doctor as $dok)
 <div class="card">
-    <img src="img_avatar.png" alt="Avatar" style="width:100%">
+    <img src="/storage/profil/img/{{ $dok->photo}}" width="100px">
     <div class="container">
         <h4><b>{{ $dok->name }}</b></h4>
         <a href="https://wa.me/{{$dok->phone}}">
