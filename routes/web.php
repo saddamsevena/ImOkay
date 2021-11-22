@@ -15,11 +15,7 @@ use App\Http\Controllers\Admin\ArtikelsController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/test', function () {
-    return view('test');
+    return view('home');
 });
 
 Auth::routes();

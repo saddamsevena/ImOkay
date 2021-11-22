@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  <body>
-    <link rel="stylesheet" type="text/css" media="screen" href="viewselfhealing.css"/>
     <h2>
       Hi, {{ Auth::user()->name }}
       <br />
@@ -231,13 +229,12 @@
         <span class="close">&times;</span>
         <p>
           Hi   {{ Auth::user()->name }}<br />Selamat kamu telah menyelesaikan 30 Days Self
-          Healing. Lakukan tes ulang untuk mengetahui kondisimu saat ini
+          Healing. Terimakasih telah menggunakan fitur 30 Days self healing!
         </p>
         <a href="{{ url('/') }}">
-          <button class="test">Start Test</button>
+          <button class="test">OK</button>
         </a>
       </div>
     </div>
     <script src="{{ asset('js/modal.js') }}"></script>
-  </body>
 @endsection
