@@ -61,7 +61,8 @@ class ArtikelsController extends Controller
     
     public function edit($id)
     {
-        return view('admin.artikel.edit', compact('id'));
+        $artikel = Artikel::where('id',$id)->get();
+        return view('admin.artikel.edit', compact('id', 'artikel'));
     }
 
     public function update(Request $request)
