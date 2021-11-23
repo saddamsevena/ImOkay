@@ -1,15 +1,6 @@
 @extends('layouts.app')
 
 @section('css')
-.icon {
-    background-color: #0f609f;
-    padding: 17px;
-    font-size: 60px;
-    color: white;
-    border-radius: 10px;
-    width: 100px;
-    height: 100px;
-}
 .highlight {
     color: #0f609f;
 }

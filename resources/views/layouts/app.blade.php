@@ -20,12 +20,10 @@
     <link rel="stylesheet" href="{{ asset('article/css/nicepage.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('article/css/showarticle.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('article/css/article.css') }}" media="screen">
-
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/selfhealing.css') }}" />
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/viewselfhealing.css') }}" /> -->
-
+<!--
     <script class="u-script" type="text/javascript" src="{{ asset('article/js/jquery.js') }}" defer=""></script>
     <script class="u-script" type="text/javascript" src="{{ asset('article/nicepage.js') }}" defer=""></script>
+  -->
     <style>
       body {
         background-color: #ededed;
@@ -55,6 +53,16 @@
 
       footer {
         margin-top: auto;
+      }
+
+      .icon {
+        background-color: #0f609f;
+        padding: 17px;
+        font-size: 60px;
+        color: white;
+        border-radius: 10px;
+        width: 100px;
+        height: 100px;
       }
       @yield('css')
     </style>
@@ -152,7 +160,7 @@
 
   <!-- START FOOTER -->
   <footer class="text-center text-lg-start bg-dark">
-    <div class="container text-center text-md-start mt-5">
+    <div class="container text-md-start mt-5">
       <div class="row mt-3">
         <!-- Logo -->
         <div class="col-8 mx-auto mb-4">
