@@ -5,10 +5,15 @@
     color: #0f609f;
 }
 .carousel-inner  {
+    display: flex;
+    align-items: center;
     min-width: 400px;
     min-height: 200px;
-    background-color: #9cd4e46b;
+    background-color: #c5e6ff61;
     border-radius: 10px;
+    box-shadow: inset 0 0 20px 0px #ccc;
+    -moz-box-shadow: inset 0 0 20px 0px #ccc;;
+    -webkit-box-shadow: inset 0 0 20px 0px #ccc;;
 }
 @endsection
 
@@ -70,7 +75,7 @@
                 <li data-target="#demo" data-slide-to="1"></li>
                 <li data-target="#demo" data-slide-to="2"></li>
             </ul>
-            <div class="carousel-inner">
+            <div class="carousel-inner p-3">
                 <div class="carousel-item active">
                     <p><b>"Im Okay sangat membantu saya dalam menangani kesehatan 
                         mental, Psikolognya juga sangat ramah dan berpengalaman, saya jadi tidak stress
