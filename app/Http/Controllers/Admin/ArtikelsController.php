@@ -61,8 +61,8 @@ class ArtikelsController extends Controller
     
     public function edit($id)
     {
-        $artikel = Artikel::where('id',$id)->get();
-        return view('admin.artikel.edit', compact('id', 'artikel'));
+        $artikel = Artikel::where('id',$id)->first();
+        return view('admin.artikel.edit', compact('artikel'));
     }
 
     public function update(Request $request)
@@ -83,7 +83,6 @@ class ArtikelsController extends Controller
             'top_news' => $request->top_news,
             ]);
         }else{
-            Storage::disk('local')->delete('/article/img/'.$artikel->foto);
             $foto = $request->file('foto');
             $foto->storeAs('/article/img', $foto->hashName(), 'public');
 
