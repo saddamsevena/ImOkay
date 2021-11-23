@@ -14,7 +14,7 @@
         @foreach($artikelterbaru as $ar)
           <div class="carousel-item active">
             <div class="container">
-              <img alt="" class="d-block w-100" src="/storage/article/img/{{ $ar->foto }}">
+              <img alt="" class="d-block w-100" src="/storage/article/img/{{ $ar->foto }}" href="/artikel/read/{{$ar->id}}">
             </div>
           </div>
         @endforeach
@@ -30,7 +30,7 @@
     </div>
     <div class="u-blog u-expanded-width u-blog-1">
       @if($artikel->isEmpty())
-        <h1>Tidak ada artikel untuk dibaca</h1>
+        <h3 class="text-center">Tidak ada artikel untuk dibaca</h3>
       @else  
         @foreach($artikel as $a)
           <div class="u-repeater u-repeater-1">
