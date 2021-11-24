@@ -26,6 +26,12 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function index_dokter()
+    {
+        return view('doctor.home');
+    }
+
+
     public function selfhealing()
     {
         return view('selfhealing.home');

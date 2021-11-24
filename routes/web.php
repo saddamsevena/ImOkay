@@ -26,7 +26,7 @@ Route::get('/artikel/read/{id}', [App\Http\Controllers\ArtikelController::class,
 Route::get('/admin', [App\Http\Controllers\Admin\AdminController::class, 'index']);
 Route::post('/admin/register', [App\Http\Controllers\Admin\AdminController::class, 'create'])->name('register_admin');
 Route::get('/home/admin', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('adminhome');
-Route::get('/home/doctor', [App\Http\Controllers\HomeController::class, 'index'])->name('doctorhome');
+Route::get('/home/doctor', [App\Http\Controllers\HomeController::class, 'index_dokter'])->name('doctorhome');
 
 Route::get('/admin/artikel', [App\Http\Controllers\Admin\ArtikelsController::class, 'index'])->name('admin.show.artikel');
 Route::get('/admin/artikel/insert', [App\Http\Controllers\Admin\ArtikelsController::class, 'create'])->name('admin.add.artikel');

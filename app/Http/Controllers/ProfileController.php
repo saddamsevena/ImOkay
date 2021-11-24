@@ -43,7 +43,7 @@ class ProfileController extends Controller
             $photo = $request->file('photo');
             $photo->storeAs('/profil/img', $photo->hashName(), 'public');
 
-            $profil = $user->update([
+            $user->update([
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => $request->password,
@@ -53,9 +53,8 @@ class ProfileController extends Controller
                 'photo' => $photo->hashName(),
             ]);
 
-            return response()->json($profil);
         }
-        // return redirect()->route('profile.view', $user->id)
-        //                 ->with('success', 'Profile Berhasil di Update');
+        return redirect()->route('profile.view', $user->id)
+                        ->with('success', 'Profile Berhasil di Update');
     }
 }
