@@ -1,12 +1,39 @@
 @extends('layouts.app')
 
+@section('css')
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card img {
+  border-radius: 80px;
+}
+@endsection
+
 @section('content')
 @foreach($user as $users)
 <div class="card">
-    <img src="/storage/profil/img/{{ $users->photo }}" width="100px">
-    <div class="container">
-        <h4><b>{{ $users->name }}</b></h4>
-        <a href="{{ route('profile.edit',$users->id) }}">Edit Profile</a>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12 text-center">
+                <img src="/storage/profil/img/{{ $users->photo }}" width="150px">
+            </div>
+            <div class="col-12">
+                <p class="h1 card-title">{{ $users->name }}</p>
+                <p class="text-muted">tulisan gatau isi apa</p>
+                <p><b>Info</b> Info</p>
+                <p><b>Info</b> Info</p>
+                <p><b>Info</b> Info</p>
+                <p><b>Info</b> Info</p>
+                <a href="{{ route('profile.edit',$users->id) }}" class="btn btn-primary">Edit Profile</a>
+            </div>
+        </div>
     </div>
 </div>
 @endforeach
