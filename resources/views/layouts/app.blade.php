@@ -122,7 +122,7 @@
           <a class="nav" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" type="button">
             {{ Auth::user()->name }}<i class="fa fa-user-circle mx-2" style="font-size: 25px;"></i>
           </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+          <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
             <li><a class="dropdown-item" href="/profile/view/{{ Auth::user()->id}}">Profile</a></li>
             <li>
               <a class="dropdown-item" href="{{ route('logout') }}"
