@@ -26,6 +26,12 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function index_dokter()
+    {
+        return view('doctor.home');
+    }
+
+
     public function selfhealing()
     {
         return view('selfhealing.home');
@@ -34,5 +40,15 @@ class HomeController extends Controller
     public function view_selfhealing()
     {
         return view('selfhealing.view');
+    }
+
+    public function view_selfhealing2()
+    {
+        return view('selfhealing.view2');
+    }
+
+    public function view_selfhealing3()
+    {
+        return view('selfhealing.view3');
     }
 }

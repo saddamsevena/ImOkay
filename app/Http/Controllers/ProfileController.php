@@ -17,7 +17,7 @@ class ProfileController extends Controller
 
     public function edit($id)
     {
-        $user = User::where('id',$id)->get();
+        $user = User::where('id',$id)->first();
         return view('profile.edit', compact('user'));
     }
 
@@ -52,6 +52,7 @@ class ProfileController extends Controller
                 'jenis_kelamin' => $request->jenis_kelamin,
                 'photo' => $photo->hashName(),
             ]);
+
         }
         return redirect()->route('profile.view', $user->id)
                         ->with('success', 'Profile Berhasil di Update');
