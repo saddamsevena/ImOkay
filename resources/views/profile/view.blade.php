@@ -25,12 +25,10 @@
                 <img src="/storage/profil/img/{{ $users->photo }}" width="150px">
             </div>
             <div class="col-12">
-                <p class="h1 card-title">{{ $users->name }}</p>
-                <p class="text-muted">tulisan gatau isi apa</p>
-                <p><b>Info</b> Info</p>
-                <p><b>Info</b> Info</p>
-                <p><b>Info</b> Info</p>
-                <p><b>Info</b> Info</p>
+                <center><p class="h1 card-title">{{ $users->name }}</p><center>
+                <p><b>{{$users->email}}<br>
+                <p><b>{{$users->jenis_kelamin}}
+                <p><b>{{$users->phone}}<br><br>
                 <a href="{{ route('profile.edit',$users->id) }}" class="btn btn-primary">Edit Profile</a>
             </div>
         </div>
