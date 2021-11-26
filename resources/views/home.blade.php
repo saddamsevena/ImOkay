@@ -5,8 +5,7 @@
     color: #0f609f;
 }
 .carousel-inner  {
-    display: flex;
-    align-items: center;
+    zalign-items: center;
     min-width: 400px;
     min-height: 200px;
     background-color: #c5e6ff61;
