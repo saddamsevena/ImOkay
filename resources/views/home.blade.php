@@ -22,7 +22,7 @@
 <div class="row">
     <div class="col-6">
         <p class="h1">Langkah awal mengenali gejala gangguan kesehatan mental.</p>
-        <button type="button" class="btn btn-secondary"><a href="">Start Test</a></button>
+        <button type="button" class="btn btn-secondary"><a href="">Konseling</a></button>
     </div>
     <div class="col-6 text-end">
         <img src="{{ asset('images/HomeIMG.png') }}" width=400>

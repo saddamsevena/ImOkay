@@ -13,7 +13,7 @@
   @foreach($artikel as $a)
 <div class="col-4">
   <div class="card">
-    <img src="/storage/article/img/{{ $a->foto }}" class="card-img-top" alt="{{$a->judul}}">
+    <img src="/storage/article/img/{{ $a->foto }}" class="card-img-top" width="100%" height="200px" alt="{{$a->judul}}">
     <div class="card-body">
       <p class="h5 card-title">{{$a->judul}}</p>
       <p class="card-text">{{$a->top_news}}</p>
@@ -29,7 +29,7 @@
 </div>
 <!-- End Card -->
 
-<section class="u-align-center u-clearfix u-section-1" id="sec-ff6a">
+<!-- <section class="u-align-center u-clearfix u-section-1" id="sec-ff6a">
   @if ($message = Session::get('succes'))
   <div class="alert alert-success">
     <p>{{ $message }}</p>
@@ -68,5 +68,5 @@
       </a>
     </div>
   </div>
-</section>
+</section> -->
 @endsection
