@@ -1,131 +1,111 @@
 @extends('layouts.app')
+
 @section('css')
-ul.pagination {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
+.icon {
+  transition: 0.3s;
+}
+.icon:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
 }
 
-ul.pagination li {display: inline;}
-
-ul.pagination li a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-    border: 1px solid #ddd;
+#myBtn {
+  height: 50px;
+  font-size: 18px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #585858;
+  display: inline-block;
+  border-radius: 10px solid #000;
+  border-radius: 10px;
 }
 
-.pagination li:first-child a {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+  
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: center;
+  font-family: Nunito;
+  font-size: 20px;
 }
 
-.pagination li:last-child a {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+}
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-ul.pagination li a.active {
-    background-color: #4CAF50;
-    color: white;
-    border: 1px solid #4CAF50;
+.test {
+  font-size: 18px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #585858;
+  display: inline-block;
+  border-radius: 10px solid #000;
+  border-radius: 10px;
 }
-
-ul.pagination li a:hover:not(.active) {background-color: #ddd};
+.test:hover {
+  opacity: 0.9;
+}
 @endsection
-@section('content')
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/viewselfhealing.css') }}" />
-    <h2>
-      Hi, {{ Auth::user()->name }}
-      <br />
-      Selamat Datang Di 30 Days Self-Healing Program
-      <br />
-      Keep Positive and Happy
-    </h2>
-<div class="container" id="box">
-      <span class="v98_81">Day 21 - How do I control my stress ?</span>
-      <div class="kotakbiru1"></div>
-      <a href="#" class="firstvideo">Second Day Video</a>
-      <div class="kotakbiru2"></div>
-      <a href="#" class="firstmodul">Second Day Modul</a>
-    </div>
-    <div class="container" id="box">
-      <span class="v98_81">Day 22 - How do I control my stress ?</span>
-      <div class="kotakbiru1"></div>
-      <a href="#" class="firstvideo">Second Day Video</a>
-      <div class="kotakbiru2"></div>
-      <a href="#" class="firstmodul">Second Day Modul</a>
-    </div>
-    <div class="container" id="box">
-      <span class="v98_81">Day 23 - How do I control my stress ?</span>
-      <div class="kotakbiru1"></div>
-      <a href="#" class="firstvideo">Second Day Video</a>
-      <div class="kotakbiru2"></div>
-      <a href="#" class="firstmodul">Second Day Modul</a>
-    </div>
-    <div class="container" id="box">
-      <span class="v98_81">Day 24 - How do I control my stress ?</span>
-      <div class="kotakbiru1"></div>
-      <a href="#" class="firstvideo">Second Day Video</a>
-      <div class="kotakbiru2"></div>
-      <a href="#" class="firstmodul">Second Day Modul</a>
-    </div>
-    <div class="container" id="box">
-      <span class="v98_81">Day 25 - How do I control my stress ?</span>
-      <div class="kotakbiru1"></div>
-      <a href="#" class="firstvideo">Second Day Video</a>
-      <div class="kotakbiru2"></div>
-      <a href="#" class="firstmodul">Second Day Modul</a>
-    </div>
-    <div class="container" id="box">
-      <span class="v98_81">Day 26 - How do I control my stress ?</span>
-      <div class="kotakbiru1"></div>
-      <a href="#" class="firstvideo">Second Day Video</a>
-      <div class="kotakbiru2"></div>
-      <a href="#" class="firstmodul">Second Day Modul</a>
-    </div>
-    <div class="container" id="box">
-      <span class="v98_81">Day 27 - How do I control my stress ?</span>
-      <div class="kotakbiru1"></div>
-      <a href="#" class="firstvideo">Second Day Video</a>
-      <div class="kotakbiru2"></div>
-      <a href="#" class="firstmodul">Second Day Modul</a>
-    </div>
-    <div class="container" id="box">
-      <span class="v98_81">Day 28 - How do I control my stress ?</span>
-      <div class="kotakbiru1"></div>
-      <a href="#" class="firstvideo">Second Day Video</a>
-      <div class="kotakbiru2"></div>
-      <a href="#" class="firstmodul">Second Day Modul</a>
-    </div>
-    <div class="container" id="box">
-      <span class="v98_81">Day 29 - How do I control my stress ?</span>
-      <div class="kotakbiru1"></div>
-      <a href="#" class="firstvideo">Second Day Video</a>
-      <div class="kotakbiru2"></div>
-      <a href="#" class="firstmodul">Second Day Modul</a>
-    </div>
-    <div class="container" id="box">
-      <span class="v98_81">Day 30 - How do I control my stress ?</span>
-      <div class="kotakbiru1"></div>
-      <a href="#" class="firstvideo">Second Day Video</a>
-      <div class="kotakbiru2"></div>
-      <a href="#" class="firstmodul">Second Day Modul</a>
-    </div>
 
-  <div class="container" id="bawah">
+@section('content')
+
+<div class="row">
+  <div class="col-12 text-center">
+    <p class="h2">
+      Hi, {{ Auth::user()->name }}
+      <br>
+      Selamat Datang Di 30 Days Self-Healing Program
+      <br>
+      Keep Positive and Happy
+    </p>
+  </div>
+</div>
+
+<div id="content"></div>
+
+<div class="row">
+  <div class="col-12 text-center">
     <!-- Trigger/Open The Modal -->
     <button id="myBtn">Finish</button>
-
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
         <p>
-          Hi {{ Auth::user()->name }} <br />Selamat kamu telah menyelesaikan 30 Days Self
+          Hi {{ Auth::user()->name }}
+          <br>
+          Selamat kamu telah menyelesaikan 30 Days Self
           Healing. Terimakasih telah menggunakan fitur 30 Days self healing!
         </p>
         <a href="{{ url('/') }}">
@@ -134,14 +114,34 @@ ul.pagination li a:hover:not(.active) {background-color: #ddd};
       </div>
     </div>
   </div>
-    <script src="{{ asset('js/modal.js') }}"></script>
-<div style="margin-left: 360px">
-<ul class="pagination">
-  <li><a href="{{ url('/selfhealing/view2') }}">«</a></li>
-  <li><a href="{{ url('/selfhealing/view') }}">1</a></li>
-  <li><a href="{{ url('/selfhealing/view2') }}">2</a></li>
-  <li><a class="active" href="{{ url('/selfhealing/view3') }}">3</a></li>
-  <li><a href="#">»</a></li>
-</ul>
 </div>
+
+<div class="row my-5">
+  <div class="col-12 text-center">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link" href="{{ url('/selfhealing/view/2') }}" tabindex="-1"><<</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="{{ url('/selfhealing/view') }}">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="{{ url('/selfhealing/view/2') }}">2</a>
+      </li>
+      <li class="page-item disabled">
+        <a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item disabled">
+        <a class="page-link" href="#">>></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script type="text/javascript" src="{{ asset('js/viewselfhealing.js') }}"></script>
+<script>
+  var content = fungsi(view3)
+  document.getElementById("content").innerHTML = content
+</script>
+<script src="{{ asset('js/modal.js') }}"></script>
 @endsection
