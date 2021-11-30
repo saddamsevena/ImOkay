@@ -33,9 +33,9 @@
     <div class="gerak">
       @foreach($artikel as $a)
       <div class="topik">
-        <a href="/">
+        <a href="/artikel/read/{{$a->id}}">
           <img src="/storage/article/img/{{ $a->foto }}">
-          <p class="h5">{{$a->judul}}</p>
+          <p class="h5">{{$a->top_news}}</p>
         </a>
       </div>
       @endforeach
@@ -55,9 +55,8 @@
     <div class="card">
       <img src="/storage/article/img/{{ $a->foto }}" class="card-img-top" alt="{{$a->judul}}">
       <div class="card-body">
-        <p class="h5 card-title">{{$a->judul}}</p>
-        <p class="card-text">{{$a->top_news}}</p>
-        <a href="/artikel/read/{{$a->id}}" class="btn btn-primary">Lihat Detail</a>
+        <p class="h5 card-title" style="text-align: center">{{$a->judul}}</p>
+        <center><a href="/artikel/read/{{$a->id}}" class="btn btn-primary light">Lihat Detail</a><center>
       </div>
       <div class="card-footer">
         <small class="text-muted">{{$a->created_at}}</small>

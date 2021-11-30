@@ -20,15 +20,20 @@
 
 @if(Auth::check())
   @if(Auth::user()->role == 'User')
+  <div class="row">
+    <div class="col-12">
     <p class="h1">Hi {{Auth::user()->name}} </p>
     <p class="h5">
       Selamat datang di konseling I'm Okay! Kami akan membantu kamu dalam penanganan kesehatan mental bersama para psikolog berpengalaman!
      <br>
      <span class="h6">Silahkan pilih psikolog keinginanmu</span>
     </p>
+    </div>
+    <div class="col-12 text-end">
+    </div>
+</div>
   @endif
 @endif
-<p class="h5">Pilih Psikolog</p>
 
 @foreach ($doctor as $dok)
 <div class="card my-3">
@@ -39,7 +44,8 @@
       </div>
       <div class="col-9">
         <p class="h5 card-title">{{ $dok->name }}</p>
-        <p class="card-text">Deskripsi</p>
+        <p class="card-text">{{$dok->email}}</p>
+        <p class="card-text">{{$dok->jenis_kelamin}}</p>
       </div>
     </div>
   </div>
