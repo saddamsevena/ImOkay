@@ -52,7 +52,11 @@
       footer {
         margin-top: auto;
       }
+<<<<<<< HEAD
       /* @yield('css') */
+=======
+      @yield('css')
+>>>>>>> origin/tasia
     </style>
   </head>
 <body>
@@ -169,10 +173,17 @@
             <a href="#" class="nav">About Us</a>
           </h6>
           <p>
+<<<<<<< HEAD
             <a href="{{ url('/about') }}" class="nav">Tentang Kami</a>
           </p>
           <p>
             <a href="{{ url('/contact') }}" class="nav">Kontak Kami</a>
+=======
+            <a href="#" class="nav">Tentang Kami</a>
+          </p>
+          <p>
+            <a href="#" class="nav">Kontak Kami</a>
+>>>>>>> origin/tasia
           </p>
         </div>
       </div>
