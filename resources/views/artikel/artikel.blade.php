@@ -1,35 +1,53 @@
 @extends('layouts.app')
 
+@section('css')
+.card, .artikel {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.card:hover, .artikel:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+@endsection
+
 @section('content')
-@if($errors->any())
-<h4>{{$errors->first()}}</h4>
-@endif
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">
-                    @foreach($artikel as $a)
-                    <!-- DISINI TARO IF ROLE = ADMIN -->
-                    <a href="/artikel/edit/{{ $a->id }}">Edit</a>
-                    <!-- ENDIF -->
-                    <h1>{{ $a->judul }}</h1>
-                    <t>Dibuat pada : {{ $a->created_at }}&ensp;& terakhir diedit pada {{ $a->updated_at }}</t>
-                </div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    <p>{{ $a->isi_artikel }}</p>
-                    @endforeach
-                    
-                </div>
+@foreach($artikel as $a)
+    <div class="col-12 text-center mb-5">
+        <p class="h1">{{$a->judul}}</p>
+    </div>
+    <div class="col-12 text-center mb-5">
+        <img class="artikel" src="/storage/article/img/{{ $a->foto }}" width="100%" alt="{{$a->judul}}">
+    </div>
+    <div class="col-12 mb-5">
+        <div class="card">
+            <div class="card-body text-justify">
+                {{ $a->isi_artikel }} 
             </div>
         </div>
     </div>
-</div>
+@endforeach
+
+@endsection
+
+@section('content')
+
+@foreach($artikel as $a)
+    <div class="col-12 text-center mb-5">
+        <p class="h1">{{$a->judul}}</p>
+    </div>
+    <div class="col-12 text-center mb-5">
+        <img class="artikel" src="/storage/article/img/{{ $a->foto }}" width="100%" alt="{{$a->judul}}">
+    </div>
+    <div class="col-12 mb-5">
+        <div class="card">
+            <div class="card-body text-justify">
+                {{ $a->isi_artikel }} 
+            </div>
+        </div>
+    </div>
+@endforeach
+
 @endsection

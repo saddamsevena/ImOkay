@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ ('Welcome') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in as doctor!') }}
+                    Hi {{Auth::user()->name}}, Terimakasih telah mendaftarkan diri sebagai psikolog kami!
+                    Kami akan melanjutkan pengecekan data kamu, Sehingga kamu dapat menjadi bagian dari Im Okay!
+                    dan membantu masyarakat dalam menangani kesehatan mental!
                 </div>
             </div>
         </div>
