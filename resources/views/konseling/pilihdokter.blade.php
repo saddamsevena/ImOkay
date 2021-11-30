@@ -22,38 +22,49 @@
   @if(Auth::user()->role == 'User')
   <div class="row">
     <div class="col-12">
-    <p class="h1">Hi {{Auth::user()->name}} </p>
-    <p class="h5">
-      Selamat datang di konseling I'm Okay! Kami akan membantu kamu dalam penanganan kesehatan mental bersama para psikolog berpengalaman!
-     <br>
-     <span class="h6">Silahkan pilih psikolog keinginanmu</span>
-    </p>
+      <p class="h2">Hi Kak {{Auth::user()->name}} </p>
+      <p class="h5 text-justify">
+        Platform I'm Okay! akan membantu kamu dalam penanganan kesehatan mental bersama para psikolog berpengalaman 
+        serta menghubungkan kamu yang ingin bertumbuh dengan Konselor yang bisa memfasilitasi pertumbuhan kamu.
+        <br>
+        <br>
+        <span class="h6">Kamu juga bisa memilih psikolog sesuai dengan keinginan kamu loh! Yuk pilih psikolog kamu dan konsultasi sekarang!</span>
+      </p>
     </div>
-    <div class="col-12 text-end">
-    </div>
-</div>
+  </div>
   @endif
 @endif
 
 @foreach ($doctor as $dok)
-<div class="card my-3">
-  <div class="card-body">
-    <div class="row">
-      <div class="col-3 text-center">
-        <img src="/storage/profil/img/{{ $dok->photo}}" width="150px">
-      </div>
-      <div class="col-9">
-        <p class="h5 card-title">{{ $dok->name }}</p>
-        <p class="card-text">{{$dok->email}}</p>
-        <p class="card-text">{{$dok->jenis_kelamin}}</p>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-3 text-center">
+          <img src="/storage/profil/img/{{ $dok->photo}}" width="150px">
+        </div>
+        <div class="col-9">
+          <p class="h5 card-title">{{ $dok->name }}</p>
+          <p class="card-text">{{$dok->email}}</p>
+          <p class="card-text">{{$dok->jenis_kelamin}}</p>
+        </div>
       </div>
     </div>
+    <div class="card-footer text-muted text-end">
+      <a href="https://wa.me/{{$dok->phone}}" class="btn btn-primary">Konsultasi Sekarang</a>
+    </div>
   </div>
-  <div class="card-footer text-muted text-end">
-    <a href="https://wa.me/{{$dok->phone}}" class="btn btn-primary">Konsultasi Sekarang</a>
-  </div>
-</div>
 @endforeach
 
-<p class="h5">Kesehatan mental sangat penting untuk dijaga karena kesehatan mental merupakan salah satu alasan perasaan kamu saat ini. Selain konseling kamu juga bisa mengurangi anxiety dan stress dari diri sendiri kamu bisa coba 30 Hari Self Healing <a href="{{url('/artikel')}}"><u>disini</u></a></p>
+  <p class="h5 text-justify">
+    Kesehatan mental sangat penting untuk kamu jaga, karena kesehatan mental merupakan salah satu alasan perasaan yang kamu rasakan saat ini. 
+    Selain konseling kami juga menyediakan Fitur 30 Hari Self Healing yang bisa membantu kamu mengurangi rasa anxiety dan stress dari diri sendiri
+    kamu bisa coba lihat lebih lanjut
+    <a href="{{url('/selfhealing')}}">
+      <u>disini.</u>
+    </a>
+  </p>
+  <div>
+    <img style="float: left" src="{{ asset('images/HomeIMG.png') }}" height=200>
+    <img style="float: right" src="{{ asset('images/Pict-1.png') }}" height=200>
+  </div>
 @endsection

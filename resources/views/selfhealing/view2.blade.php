@@ -29,20 +29,20 @@
 <div class="row my-5">
   <div class="col-12 text-center">
     <ul class="pagination justify-content-center">
-      <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1"><<</a>
-      </li>
-      <li class="page-item disabled">
-        <a class="page-link" href="#">1</a>
+      <li class="page-item">
+        <a class="page-link" href="{{ url('/selfhealing/view') }}"><<</a>
       </li>
       <li class="page-item">
-        <a class="page-link" href="{{ url('/selfhealing/view/2') }}">2</a>
+        <a class="page-link" href="{{ url('/selfhealing/view') }}">1</a>
+      </li>
+      <li class="page-item disabled">
+        <a class="page-link" href="#">2</a>
       </li>
       <li class="page-item">
         <a class="page-link" href="{{ url('/selfhealing/view/3') }}">3</a>
       </li>
       <li class="page-item">
-        <a class="page-link" href="{{ url('/selfhealing/view/2') }}">>></a>
+        <a class="page-link" href="{{ url('/selfhealing/view/3') }}">>></a>
       </li>
     </ul>
   </div>
@@ -50,7 +50,7 @@
 
 <script type="text/javascript" src="{{ asset('js/viewselfhealing.js') }}"></script>
 <script>
-  var content = fungsi(view1)
+  var content = fungsi(view2)
   document.getElementById("content").innerHTML = content
 </script>
 @endsection

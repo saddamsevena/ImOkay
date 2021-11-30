@@ -7,7 +7,7 @@
             <div class="card">
                 <h5 style="text-align: center; padding: 15px">{{ __('Register') }}</h5>
 
-                <div class="card-body row row-cols-2">
+                <div class="card-body row row-cols-10">
                     <div>
                         <form method="POST" action="{{ route('register') }}" class="offset-md-1 col">
                             @csrf
@@ -85,10 +85,9 @@
                                     <input id="user" type="radio" class="" name="role" required value="User"> User
                                 </div>
                             </div>
-
-                            <div class="form-text row">
-                                <div class="col-md-10">
-                                    <button type="submit" class="btn btn-secondary col-md-12">
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-secondary col-md-8">
                                         {{ __('Register') }}
                                     </button>
                                 </div>
@@ -96,7 +95,7 @@
                         </form>
                     </div>
 
-                    <div class="" style="border-left: 1px solid black">
+                    <!-- <div class="col" style="border-left: 1px solid black">
                         <p style="text-align: center">Masuk dengan :</p>
                         <div style="border: 1px solid" class="card">
                             <ul class="justify-content-center list-unstyled d-flex bg-white">
@@ -105,9 +104,9 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="container-sm border-top">
-                    <p style="text-align: center">Sudah punya akun? Login <a style="color: blue" href="{{ route('login') }}"><u>{{ __('disini') }}</u></a></p>
+                    <p style="text-align: center;">Sudah punya akun? Login <a style="color: blue" href="{{ route('login') }}"><u>{{ __('disini') }}</u></a></p>
                 </div>
             </div>
         </div>

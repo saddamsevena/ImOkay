@@ -27,37 +27,37 @@
      <div class="row">
      <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <input type="hidden" name="id" class="form-control" value="{{$id}}">
+                <input type="hidden" name="id" class="form-control" value="{{$artikel->id}}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Judul:</strong>
-                <input type="text" name="judul" class="form-control" placeholder="Judul Artikel">
+                <input type="text" name="judul" class="form-control" placeholder="Judul Artikel" value="{{$artikel->judul}}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Author:</strong>
-                <input type="text" name="author" class="form-control" placeholder="Nama Author">
+                <input type="text" name="author" class="form-control" placeholder="Nama Author" value="{{$artikel->author}}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Detail:</strong>
-                <textarea class="form-control" style="height:150px" name="isi_artikel" placeholder="Penjelasan Artijel"></textarea>
+                <textarea class="form-control" style="height:150px" name="isi_artikel" placeholder="Penjelasan Artijel" value="{{$artikel->isi_artikel}}"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Foto:</strong>
-                <input type="file" name="foto" class="form-control" placeholder="foto">
+                <input type="file" name="foto" class="form-control" placeholder="foto" value="{{$artikel->foto}}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Top News:</strong>
-                <input type="text" name="top_news" class="form-control" placeholder="Ringkasan News">
+                <input type="text" name="top_news" class="form-control" placeholder="Ringkasan News" value="{{$artikel->top_news}}">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
