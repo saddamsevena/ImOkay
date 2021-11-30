@@ -20,11 +20,11 @@
 <!-- START HEAD -->
 <div class="row">
     <div class="col-6">
-        <p class="h1 text-justify">Langkah awal mengenali gejala gangguan kesehatan mental.</p>
+        <p class="h1">Langkah awal mengenali gejala gangguan kesehatan mental.</p>
         @if(Auth::check())
-        <button type="button" class="btn btn-secondary"><a href="{{ url('/konseling') }}">Konsultasi sekarang!</a></button>
+        <button type="button" class="btn btn-secondary"><a href="{{ url('/konseling') }}">Konseling</a></button>
         @else
-        <button type="button" class="btn btn-secondary"><a href="{{ route('login') }}">Konsultasi sekarang!</a></button>
+        <button type="button" class="btn btn-secondary"><a href="{{ route('login') }}">Konseling</a></button>
         @endif
     </div>
     <div class="col-6 text-end">
@@ -42,10 +42,10 @@
         <i class="fas fa-tasks icon"></i>
     </div>
     <div class="col-3">
-        <p class="text-justify">30 Days Self Healing Program untuk membantu perkembangan kesehatan mental</p>
+        <p>30 Days Self Healing Program untuk membantu perkembangan kesehatan mental</p>
     </div>
     <div class="col-3 text-end">
-        <p class="text-justify">Free Quick Test Mental Health untuk mengetahui diagnosa awal kesehatan mental</p>
+        <p>Free Quick Test Mental Health untuk mengetahui diagnosa awal kesehatan mental</p>
     </div>
     <div class="col-2 text-center">
         <i class="fas fa-stopwatch icon"></i>
@@ -55,10 +55,10 @@
         <i class="fas fa-comment-alt icon"></i>
     </div>
     <div class="col-3">
-        <p class="text-justify">Konsultasi online dengan para psikolog yang berpengalaman</p>
+        <p>Konsultasi online dengan para psikolog yang berpengalaman</p>
     </div>
     <div class="col-3 text-end">
-        <p class="text-justify">Artikel dan juga berita terbaru terkait kesehatan mental di dunia</p>
+        <p>Artikel dan juga berita terbaru terkait kesehatan mental di dunia</p>
     </div>
     <div class="col-2 text-center">
         <i class="fas fa-newspaper icon"></i>

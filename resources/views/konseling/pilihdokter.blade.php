@@ -53,6 +53,8 @@
       <a href="https://wa.me/{{$dok->phone}}" class="btn btn-primary">Konsultasi Sekarang</a>
     </div>
   </div>
+  <br>
+  <br>
 @endforeach
 
   <p class="h5 text-justify">
@@ -64,7 +66,7 @@
     </a>
   </p>
   <div>
-    <img style="float: left" src="{{ asset('images/HomeIMG.png') }}" height=200>
+    <!-- <img style="float: left" src="{{ asset('images/HomeIMG.png') }}" height=200> -->
     <img style="float: right" src="{{ asset('images/Pict-1.png') }}" height=200>
   </div>
 @endsection
