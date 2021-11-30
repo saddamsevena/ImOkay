@@ -12,7 +12,7 @@
                         @csrf
 
                         <div class="form-group row" style="padding: 10px">
-                            <div class="col-md-5">
+                            <div class="col-md-10">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nama Panjang">
 
                                 @error('name')
@@ -24,7 +24,7 @@
                         </div>
 
                         <div class="form-group row" style="padding: 10px">
-                            <div class="col-md-5">
+                            <div class="col-md-10">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
 
                                 @error('email')
@@ -36,7 +36,7 @@
                         </div>
                         
                         <div class="form-group row" style="padding: 10px">
-                            <div class="col-md-5">
+                            <div class="col-md-10">
                                 <input id="phone" type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus placeholder="Nomor HP">
 
                                 @error('phone')
@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="form-group row" style="padding: 10px">
-                            <div class="col-md-5">
+                            <div class="col-md-10">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
 
                                 @error('password')
@@ -60,7 +60,7 @@
                         </div>
 
                         <div class="form-group row" style="padding: 10px">
-                            <div class="col-md-5">
+                            <div class="col-md-10">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Konfirmasi Password">
                             </div>
                         </div>

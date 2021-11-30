@@ -42,7 +42,7 @@ Route::get('/artikel/read/{id}', [App\Http\Controllers\ArtikelController::class,
 Route::get('/admin', [App\Http\Controllers\Admin\AdminController::class, 'index']);
 Route::post('/admin/register', [App\Http\Controllers\Admin\AdminController::class, 'create'])->name('register_admin');
 Route::get('/home/admin', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('adminhome');
-Route::get('/home/doctor', [App\Http\Controllers\HomeController::class, 'index'])->name('doctorhome');
+Route::get('/home/doctor', [App\Http\Controllers\HomeController::class, 'index_dokter'])->name('doctorhome');
 
 Route::get('/admin/artikel', [App\Http\Controllers\Admin\ArtikelsController::class, 'index'])->name('admin.show.artikel');
 Route::get('/admin/artikel/insert', [App\Http\Controllers\Admin\ArtikelsController::class, 'create'])->name('admin.add.artikel');
@@ -53,5 +53,11 @@ Route::put('/admin/artikel/update', [App\Http\Controllers\Admin\ArtikelsControll
 
 Route::get('/selfhealing', [App\Http\Controllers\HomeController::class, 'selfhealing'])->name('selfhealing');
 Route::get('/selfhealing/view', [App\Http\Controllers\HomeController::class, 'view_selfhealing'])->name('view.selfhealing');
+Route::get('/selfhealing/view/2', [App\Http\Controllers\HomeController::class, 'view_selfhealing2'])->name('view.selfhealing2');
+Route::get('/selfhealing/view/3', [App\Http\Controllers\HomeController::class, 'view_selfhealing3'])->name('view.selfhealing3');
 
 Route::get('/konseling', [App\Http\Controllers\KonselingController::class, 'index'])->name('home.konseling');
+
+Route::get('/profile/view/{id}', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile.view');
+Route::get('/profile/edit/{id}', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
+Route::put('/profile/update', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');

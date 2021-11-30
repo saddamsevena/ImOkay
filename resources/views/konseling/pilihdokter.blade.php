@@ -1,9 +1,9 @@
 @extends('layouts.app')
+
 @section('css')
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 60%;
   border-radius: 5px;
 }
 
@@ -11,56 +11,49 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-img {
-  border-radius: 5px 5px 0 0;
-}
-
-.container {
-  padding: 2px 25px;
+.card img {
+  border-radius: 5px;
 }
 @endsection
+
 @section('content')
-<!-- START HEAD -->
-<div class="row">
-    @if(Auth::check())
-    @if(Auth::user()->role == 'User')
-    <div class="col-10">
-        <h1>Hi {{Auth::user()->name}} </h1>
-        <p>
-          Selamat datang di konseling I'm Okay! Kami akan membantu kamu dalam penanganan kesehatan mental
-          bersama para psikolog berpengalaman!
-          <br> Silahkan pilih psikolog keinginanmu
-        </p>
+
+@if(Auth::check())
+  @if(Auth::user()->role == 'User')
+  <div class="row">
+    <div class="col-12">
+    <p class="h1">Hi {{Auth::user()->name}} </p>
+    <p class="h5">
+      Selamat datang di konseling I'm Okay! Kami akan membantu kamu dalam penanganan kesehatan mental bersama para psikolog berpengalaman!
+     <br>
+     <span class="h6">Silahkan pilih psikolog keinginanmu</span>
+    </p>
     </div>
-    @endif
-    @endif
-    <h5>Pilih Psikolog</h5>
+    <div class="col-12 text-end">
+    </div>
 </div>
-<!-- END HEAD -->
+  @endif
+@endif
+
 @foreach ($doctor as $dok)
-<div class="card">
-    <img src="img_avatar.png" alt="Avatar" style="width:100%">
-    <div class="container">
-        <h4><b>{{ $dok->name }}</b></h4>
-        <a href="https://wa.me/{{$dok->phone}}">
-          <button class="test">Konsultasi Sekarang</button>
-        </a>
+<div class="card my-3">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-3 text-center">
+        <img src="/storage/profil/img/{{ $dok->photo}}" width="150px">
+      </div>
+      <div class="col-9">
+        <p class="h5 card-title">{{ $dok->name }}</p>
+        <p class="card-text">{{$dok->email}}</p>
+        <p class="card-text">{{$dok->jenis_kelamin}}</p>
+      </div>
     </div>
+  </div>
+  <div class="card-footer text-muted text-end">
+    <a href="https://wa.me/{{$dok->phone}}" class="btn btn-primary">Konsultasi Sekarang</a>
+  </div>
 </div>
 @endforeach
 
-<div class="row">
-    <div class="col-10">
-        <p>
-        Kesehatan mental sangat penting untuk dijaga
-          karena kesehatan mental merupakan salah satu alasan perasaan
-          kamu saat ini. Jika kamu tertarik lebih kamu bisa membaca artikel
-          kesehatan mental <a href="{{url('/artikel')}}">disini </a>
-        </p>
-        <p>
-        Selain konseling kamu juga bisa mengurangi anxiety dan stress
-        dari diri sendiri kamu bisa coba 30 Hari Self Healing <a href="{{url('/artikel')}}">disini </a>
-        </p>
-    </div>
-</div>
+<p class="h5">Kesehatan mental sangat penting untuk dijaga karena kesehatan mental merupakan salah satu alasan perasaan kamu saat ini. Selain konseling kamu juga bisa mengurangi anxiety dan stress dari diri sendiri kamu bisa coba 30 Hari Self Healing <a href="{{url('/artikel')}}"><u>disini</u></a></p>
 @endsection
